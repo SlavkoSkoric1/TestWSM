@@ -1,0 +1,75 @@
+.topnav{
+  width: 100%;
+  min-height: $topbar-minimalheight;
+  display: flex;
+  flex-direction: row;
+  background-color: $topbar-bg;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-right: $spacing-medium;
+  padding-left: $spacing-medium;
+}
+
+.topnav{
+  &-left,
+  &-center,
+  &-right{
+    display: flex;
+    align-items: center;
+  }
+  &-left    {justify-content: flex-start; }
+  &-center  {justify-content: center;     }
+  &-right   {justify-content: flex-end;   }
+  &-right > *{
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-child{
+      padding-right: 0px;
+    }
+  }
+}
+
+
+.topnav{
+  .avatar{
+    width: $sz-avatar-topnav;
+    height: $sz-avatar-topnav;
+    border-radius: 50%;
+  }
+}
+
+// buttons styling for dropdowns in topnav
+.topnav {
+  .dropdown {
+    .btn {
+      background-color: inherit;
+      border: none;
+      border-radius: 0;
+      // padding: 0 !important;
+      text-align: left;
+      margin: 0;
+
+      &:hover {
+        background-color: $cl-bg-hover;
+        color: $brand-clickable;
+      }
+    }
+
+    &.btn-group.open .dropdown-toggle {
+      box-shadow: none;
+      background-color: $cl-bg-hover;
+    }
+
+    .btn.dropdown-button {
+    }
+
+    .dropdown-menu {
+      padding: 0;
+      border: none;
+
+      .btn {
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+// Hide input to show validation only
+.hide-input {
+    input, .form-control{
+      display: none;
+    }
+  
+    div.form-control-static {
+      // Input reference selectors
+      display: none;
+    }
+  }

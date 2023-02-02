@@ -1,0 +1,42 @@
+/////// fix for accordian widget.
+.widget-accordion-group {
+  background-color: inherit;
+  border-color: inherit;
+  border-bottom: none;
+  border-width: 0px;
+}
+
+.widget-accordion-group
+  > .widget-accordion-group-header
+  > .widget-accordion-group-header-button {
+  padding: 0;
+}
+
+.widget-accordion-group
+  > .widget-accordion-group-content-wrapper
+  > .widget-accordion-group-content {
+  padding: 0;
+  overflow: inherit;
+}
+
+.widget-accordion-group
+  > .widget-accordion-group-header
+  > .widget-accordion-group-header-button.widget-accordion-group-header-button-clickable:hover {
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.widget-accordion-group
+  > .widget-accordion-group-header
+  > .widget-accordion-group-header-button.widget-accordion-group-header-button-clickable:hover
+  > :is(h1, h2, h3, h4, h5, h6, p, span) {
+  color: $brand-clickable;
+}
+
+.widget-accordion-group
+  > .widget-accordion-group-header
+  > .widget-accordion-group-header-button
+  > :is(h1, h2, h3, h4, h5, h6, p) {
+  color: $font-color-detail;
+  margin-bottom: 0;
+}

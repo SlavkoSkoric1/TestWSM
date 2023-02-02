@@ -1,0 +1,98 @@
+
+h1, h2, h3, h4, h5, .mx-title{
+    padding: 0;
+    margin: 0;
+}
+
+//custom paddings (pragmatic solution, not best practice)
+h4{
+    padding-top: $spacing-medium;
+}
+
+h1, h2, h3{
+    padding-top: $spacing-medium;
+    padding-bottom: $spacing-medium;
+    padding-right: $spacing-small;
+}
+
+.card{
+    h1, h2, h3, h4{
+        padding: 0;
+    }
+}
+
+a.mx-link + a.mx-link {
+    margin-left: $spacing-text;
+}
+
+.col-left{
+    a.mx-link + a.mx-link {
+        margin-left: 0;
+    }
+}
+
+h1, .mx-title{
+    line-height: 48px;
+    .hero &{
+
+    }
+}
+
+h2, .title{
+    line-height: 32px;
+}
+
+
+h3{
+    line-height: 28px;
+}
+
+
+h4{
+    line-height: 18px;
+    color: $font-color-default;
+}
+
+
+h5{
+    line-height: 16px;
+
+}
+
+h6{
+    line-height: 14px;
+}
+
+span{
+
+}
+
+
+.text-sm{
+    font-size: 12px;
+}
+
+.text-xs{
+    font-size: 10px;
+}
+
+.text-mono{
+    font-family: monospace;
+}
+
+.text-wrap{                     //new class: shows full text box in list view
+    white-space: normal;
+}
+
+//////////// tags
+.tag{
+
+}
+
+.brand-title{
+    font-size: $font-size-h3;
+    line-height: 28px;
+}
+
+
+

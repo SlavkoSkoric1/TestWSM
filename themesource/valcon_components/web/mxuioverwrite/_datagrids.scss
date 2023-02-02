@@ -1,0 +1,42 @@
+.mx-datagrid{ 
+    table{ 
+        tbody{
+            tr{
+
+                &.selected td{
+                    background-color: $brand-primary !important;
+                    color: $white;
+                }
+                &.selected:hover td{
+                    background-color: darken($brand-primary ,5) !important;
+                    color: $white;
+                }
+                
+                td{
+                    background-color: inherit;
+                }
+                
+            }
+        }
+    }
+}
+
+.datagrid-pagination-bottom{
+    display: flex;
+    flex-direction: column-reverse
+}
+
+// Set the same background color for striped listviews and datagrids
+.datagrid-striped.mx-datagrid table tbody tr:nth-child(odd) td {
+    background-color: $cl-bg-striped;
+  }
+
+// Remove datagrid-striped borders to look list the listview-striped
+.datagrid-striped.mx-datagrid table tr td {
+    border-bottom: none;
+  }
+
+  // Don't show grid contents (useful for keeping the export button)
+.datagrid-hide-content .mx-grid-content {
+    display: none;
+  }

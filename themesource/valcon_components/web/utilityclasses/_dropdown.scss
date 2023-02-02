@@ -1,0 +1,33 @@
+.topnav {
+  .dropdown.open>.dropdown-menu {
+    //background-color: red;
+    min-width: auto;
+    // left: auto;
+    // right: 0;
+    display: flex;
+    flex-direction: column;
+    //   padding: 10px 0;
+    //margin-left: 10px;
+
+    a {
+      //background-color: blue;
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      padding: 8px 20px;
+
+      &:hover {
+        background-color: rgba($brand-primary, 0.2);
+        text-decoration: none;
+      }
+    }
+
+    .active>a,
+    .dropdown-menu>.active>a:hover,
+    .dropdown-menu>.active>a:focus {
+
+      background-color: $brand-active;
+
+    }
+  }
+}

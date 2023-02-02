@@ -1,0 +1,229 @@
+//flexpopups
+/////////
+.modal-dialog.mx-window {
+  &.flexlayout_popup {
+    top: 00px !important;
+    right: 0px !important;
+    width: 50% !important;
+    height: 100% !important;
+
+    //closes page when clicking outsite the popup
+    .modal-body>button.btn-inverse{
+      position: fixed;
+      top: 0;
+      height: 100%;
+      opacity: 0;
+    }
+
+    &.bottom {
+      animation: slideinfrombottom 0.3s;
+      left: 00% !important;
+      width: 100% !important;
+      top: 50px !important;
+
+      //closes page when clicking outsite the popup
+      .modal-body>button.btn-inverse{
+        left: 0;
+        width: 100%;
+        height: 50px;
+      }
+
+    }
+
+    &.right {
+      animation: slideinfromright 0.3s;
+      left: 20% !important;
+      width: 80% !important;
+
+      //closes page when clicking outsite the popup
+      .modal-body>button.btn-inverse{
+        left: 0;
+        width: 20%;
+      }
+
+      @media (min-width: $screen-lg) {
+        //when bigger than 50%
+        left: 35% !important;
+        width: 65% !important;
+
+        //closes page when clicking outsite the popup
+        .modal-body>button.btn-inverse{
+          left: 0;
+          width: 35%;
+        }
+      }
+
+      @media (min-width: $screen-xl) {
+        //when bigger than 75%
+        left: 50% !important;
+        width: 50% !important;
+
+        //closes page when clicking outsite the popup
+        .modal-body>button.btn-inverse{
+          left: 0;
+          width: 50%;
+        }
+      }
+    }
+
+    &.right.xl {
+      animation: slideinfromright 0.3s;
+      left: 10% !important;
+      width: 90% !important;
+
+      //closes page when clicking outsite the popup
+      .modal-body>button.btn-inverse{
+        left: 0;
+        width: 10%;
+      }
+
+      @media (min-width: $screen-lg) {
+        //when bigger than 50%
+        left: 15% !important;
+        width: 85% !important;
+
+        //closes page when clicking outsite the popup
+        .modal-body>button.btn-inverse{
+          left: 0;
+          width: 15%;
+        }
+      }
+
+      @media (min-width: $screen-xl) {
+        //when bigger than 75%
+        left: 25% !important;
+        width: 75% !important;
+
+        //closes page when clicking outsite the popup
+        .modal-body>button.btn-inverse{
+          left: 0;
+          width: 25%;
+        }
+      }
+    }
+
+    &.left {
+      animation: slideinfromleft 0.3s;
+
+      left: 0% !important;
+      width: 90% !important;
+      opacity: 1 !important;
+      position: fixed !important;
+
+      //closes page when clicking outsite the popup
+      .modal-body>button.btn-inverse{
+        right: 0;
+        width: 10%;
+      }
+
+      &.nav {}
+    }
+
+
+
+    +.mx-underlay {
+      opacity: 0.5 !important;
+      animation: fadein 0.3s;
+    }
+
+
+
+
+    //remove styling
+    .modal-header.mx-window-header {
+      display: none;
+    }
+
+    .modal-content {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      height: 100%;
+      background-color: $bg-color-secondary;
+
+      .modal-body.mx-window-body {
+        //overflow-y: scroll;
+        overflow: hidden;
+        height: 100% !important;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        flex-direction: column;
+        overflow-y: auto; //when content is too much it scrolls
+
+        >.mx-placeholder {
+          display: contents;
+
+          >.mx-dataview {
+            display: contents;
+
+
+            >.mx-dataview-content {
+              // main container within the task detail wrap          
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+
+              //padding: 15px 15px; //breaks bottom
+              padding: 0px;
+              //background-color: red;
+              overflow-y: auto;
+              overflow-x: hidden !important;
+
+              >.mx-dataview {
+                display: contents;
+
+                //display: none;
+                >.mx-dataview-content {
+                  display: contents;
+                }
+              }
+
+              .row {
+                margin: 0;
+              }
+
+              [class*="col-"]:first-of-type {
+                padding-left: 0;
+              }
+
+              [class*="col-"]:last-of-type {
+                padding-right: 0;
+              }
+
+            }
+
+            .mx-dataview-controls {
+              background-color: #fff;
+              padding: 15px;
+              border-radius: 0;
+              justify-content: space-between;
+
+              .mx-dataview,
+              .mx-dataview-content {
+                display: contents;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes slideinfromleft {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+@keyframes slideinfromright {
+  from { transform: translateX(50%); }
+  to   { transform: translateX(0%); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: .5; }
+}

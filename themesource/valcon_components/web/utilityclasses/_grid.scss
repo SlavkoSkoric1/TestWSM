@@ -1,0 +1,53 @@
+/////////////////////////////////
+// Listview - grid items
+/////////////////////////////////
+
+.grid.mx-listview > ul,
+.grid:not(.mx-listview){
+    display: grid; //change this to grid maybe
+    grid-column-gap: $spacing-medium;
+    grid-row-gap: $spacing-medium;
+    //grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+// generate grid colomns
+$amountOfLinks: 10;
+@for $i from 1 through $amountOfLinks {
+  .grid-#{$i}.mx-listview > ul,
+  .grid-#{$i}.grid:not(.mx-listview){
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+//spread over row but not less than 200px
+.grid-a.mx-listview > ul,
+.grid:not(.mx-listview).grid-a{
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+// makes all children equal height
+.grid.grid-equalheight.mx-listview > ul > li{
+  display: contents;
+}
+
+
+
+// /////////////////////////////////
+// // Container - grid items
+// /////////////////////////////////
+// .grid:not(.mx-listview){
+//   // display: grid; //change this to grid maybe
+//   // grid-column-gap: $spacing-medium;
+//   // grid-row-gap: $spacing-medium;
+// }
+
+// $amountOfLinks: 10;
+// @for $i from 1 through $amountOfLinks {
+//   .grid:not(.mx-listview).grid-#{$i}{
+//     //grid-template-columns: repeat(#{$i}, 1fr);
+//   }
+// }
+
+// .grid:not(.mx-listview).grid-a{
+//   //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+// }

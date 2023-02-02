@@ -1,0 +1,59 @@
+// The atlas core helper classes contain width and height helpers which specify percentages, such as h-25 meaning height: 25%.
+//  This sheet contains additions to these classes to set height and width to specific pixel values
+// Last update: 19-08-2022 KDR
+
+// Size helpers for 100-2000px
+@for $i from 1 through 20 {
+  .maxw-#{$i}00px {
+    max-width: #{$i}00px;
+  }
+  .minw-#{$i}00px {
+    min-width: #{$i}00px;
+  }
+
+  .w-#{$i}00px {
+    width: #{$i}00px;
+    @extend .maxw-#{$i}00px;
+    @extend .minw-#{$i}00px;
+  }
+
+  .maxh-#{$i}00px {
+    max-height: #{$i}00px;
+  }
+  .minh-#{$i}00px {
+    min-height: #{$i}00px;
+  }
+  .h-#{$i}00px {
+    height: #{$i}00px;
+    @extend .maxh-#{$i}00px;
+    @extend .minh-#{$i}00px;
+  }
+}
+
+// Size helpers for 10-190px
+@for $i from 1 through 19 {
+  .maxw-#{$i}0px {
+    max-width: #{$i}0px;
+  }
+  .minw-#{$i}0px {
+    min-width: #{$i}0px;
+  }
+
+  .w-#{$i}0px {
+    width: #{$i}0px;
+    @extend .maxw-#{$i}0px;
+    @extend .minw-#{$i}0px;
+  }
+
+  .maxh-#{$i}0px {
+    max-height: #{$i}0px;
+  }
+  .minh-#{$i}0px {
+    min-height: #{$i}0px;
+  }
+  .h-#{$i}0px {
+    height: #{$i}0px;
+    @extend .maxh-#{$i}0px;
+    @extend .minh-#{$i}0px;
+  }
+}

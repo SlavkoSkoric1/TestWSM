@@ -1,0 +1,689 @@
+@import "custom-variables";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/*Navbar*/
+
+div.navbar.navbar-default.mx-navbar.mx-name-menuBar1 {
+    background-color: black;
+}
+
+
+.topnav,
+.navbar-default
+.mobilesidenav,
+.navbar-inner {
+    background-color:black;
+}
+
+.region-topbar,
+.region-sidebar {
+    background-color:black !important;
+}
+
+.region-sidebar .mx-navigationtree li.mx-navigationtree-has-items > ul {
+    background-color: $valcon-dark-grey;
+}
+
+.region-sidebar .mx-navigationtree li.mx-navigationtree-has-items > ul li a {
+    color: #fff;
+    background-color: $valcon-dark-grey;
+    font-size: 12px;
+}
+
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+    color: #fff;
+    background-color:black;
+    font-size: 14px;
+}
+
+.region-sidebar .mx-navigationtree .navbar-inner > ul > li a:hover {
+    background-color:$valcon-dark-grey;
+}
+
+/*********Home page***********/
+
+.title-pageheader{
+    margin: 15px 24px 24px;
+    text-align: center;
+}
+
+
+h3.mx-text.mx-name-text2 {
+    text-transform: capitalize;
+}
+
+.mx-name-tabContainer1HomeWeb {
+    & > ul.nav.nav-tabs.mx-tabcontainer-tabs {
+        max-width: 1200px;
+        margin: 0 auto 32px auto;
+        border-bottom: none;
+    }  
+}
+
+.mx-name-tabContainer1HomeWebAdmin {
+    & > ul.nav.nav-tabs.mx-tabcontainer-tabs {
+        max-width: 1200px;
+        margin: 0 auto 32px auto;
+        border-bottom: none;
+    }  
+}
+
+
+.home-grid2 {
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background-color: white;
+    padding: 30px;
+}
+
+.home-grid3 {
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 30px;
+    width: auto;
+    background-color: white;
+    padding: 30px; 
+}
+
+.admin-action-grid {
+    position: relative;
+    left: 5%;
+    top: 100px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 30px;
+    width: 80%;
+    background-color: white;
+    padding: 30px;
+}
+
+.home-grid4 {
+    position: relative;
+    top: 10rem;
+    left: 20%;
+    margin: 0 50px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 50%;
+    background-color: white;
+    padding: 30px;
+}
+
+.col-center > h5 {
+    padding-bottom: 18px;
+}
+
+.flexlayout_wrap > div.mx-placeholder > div.mx-placeholder div.mx-layoutgrid.flexlayout_content {
+    background-color: $valcon-light-grey;
+}
+
+div.mx-name-container3.col-header.col-center {
+    margin-bottom: 5rem;
+}
+
+/*Account/Employee Overview*/
+
+.mobile-overview-tabs {
+    & > ul.nav-tabs{
+        position: relative;
+        top: 5rem;
+        margin-left: 0.5rem;
+        border-bottom: none;
+        max-width: 100px;
+        & li > a {
+            border-bottom: none !important;
+        }
+        & li.active > a {
+            color: #9A71FF;
+            font-weight: 700;
+            border-bottom: none !important;
+            &:focus, &:visited {
+                color: #9A71FF;
+                font-weight: 700;
+                border-bottom: none;
+            }
+            &:hover{
+                color: #9A71FF;
+                font-weight: 700;
+                border-bottom: none;
+            }
+            &:active{
+                color: #9A71FF;
+                font-weight: 700;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.employee-overview-tabs {
+    & > ul.nav-tabs {
+        border-bottom: none;
+        margin: 0 auto 32px auto;
+        max-width: 1200px;
+    }
+}
+
+.samlsso-tabs {
+    & > ul.nav-tabs {
+       border-bottom: none;
+        margin: 0 auto 32px auto;
+        max-width: 1200px; 
+    }
+}
+
+
+/*Admin action*/
+
+.admin-action-title {
+    margin-bottom: 30px;
+}
+
+/*table.mx-table > tbody > tr > td, table.mx-table > tbody > tr > th {
+    padding: 15px 2px;
+}*/
+
+/*Reservation NewEdit*/
+
+div.mx-name-container4 > div.mx-name-layoutGrid1.mx-layoutgrid.mx-layoutgrid-fluid > div.row {
+    margin-left: 15px;
+}
+
+span.glyphicon.glyphicon-calendar {
+    color: black;
+}
+
+.reservation-button-container {
+    padding: 16px 16px 0 0;
+    display: contents;
+}
+
+.timeWidget {
+    padding: 0 !important;
+}
+
+
+.containerGuest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > .referenceSelectorGuest > .col-sm-9 > .mx-compound-control {
+            max-width: 90%;
+            position: relative;
+            left: 1.2rem;
+        }
+        & > button {
+            position: relative;
+            bottom: 0.8rem;
+            right: 1.7rem;
+        }
+        @media screen and (max-width: 768px) {
+            & > button {
+            margin-right: 1.5rem;
+            margin-top: 0.7rem;
+            position: relative;
+            bottom: 0;
+            right: 0;
+        }
+        & > .referenceSelectorGuest > .col-sm-9 > .mx-compound-control {
+            max-width: 100%;
+            position: relative;
+            left: 0;
+        }
+    }
+} 
+
+
+/*Login*/
+
+.login-layoutGrid {
+    padding: 0;
+    margin: 0;
+}
+
+.pageheader-login {
+    position: relative;
+    top: 20%;
+    margin-bottom: 7rem;
+}
+
+.img-valcon-logo {
+    position: absolute;
+    right: 5%;
+    top: 3%;
+}
+
+.or-content {
+  margin: 10px auto;
+  width: 300px;
+}
+
+.or {
+    text-align: center;
+    font-size: 20px;
+    background: linear-gradient(#000 0 0) left, linear-gradient(#000 0 0) right;
+    background-size: 40% 1px;
+    background-repeat: no-repeat;
+}
+
+.username-input .control-label {
+    color: black
+}
+
+.password-input .control-label {
+    color: black;
+}
+
+.img-background {
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    opacity: 0.8;
+}
+
+.login-container{
+    position: relative;
+    top: 15rem;
+    left: 20%;
+}
+
+.username-input,
+.password-input,
+.validation-message {
+    width: 25rem;
+}
+
+.validation-message {
+    margin-bottom: 3rem;
+}
+
+.pageheader-title {
+    color: black;
+}
+
+/*Mobile Login*/
+
+.mx-page.layout-atlas.layout-atlas-phone {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-mobile-header{
+    position: relative;
+    bottom: 2rem;
+    left: 1rem;
+}
+
+.valcon-login-mobile {
+    position: relative;
+    top: 2rem;
+    & > img {
+        margin-left: 1.5rem;
+    }
+}
+
+.login-mobile-page {
+    margin-top: 0rem;
+}
+
+.username-input-mobile,
+.password-input-mobile {
+    width: 20rem;
+}
+
+.userpassword-container-mobile{
+    margin: 20px 0 0 20px;
+    .mx-name-validationMessage2 {
+        max-width: 200px;
+    }
+}
+
+/*Home page mobile*/
+
+@media screen and (max-width: 768px) {
+    .img-office {
+        & > img {
+            position: relative;
+            top: 8rem;
+        }
+
+        &-container {
+           position: relative;
+            width: 50rem;
+            height: 30rem;
+            top: 10rem;
+            right: 12rem;
+            transform: rotate(90deg); 
+        }
+    } 
+}  
+
+
+
+.row-mobile-home {
+    margin-top: 2rem;
+    & > .col-mobile-first {
+        display: flex;
+        justify-content: center;
+        margin-left: -0.7rem;
+        margin-top: 0.5rem;
+    }
+    & > .col-mobile-second {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 2rem;
+    }
+}
+
+.emptyListView > ul > li.mx-listview-empty {
+    display: none; 
+}
+
+.table-mobile {
+    position: relative;
+    top: 1.5rem;
+    left: 1.7rem;
+    margin-bottom: 30px;
+}
+
+.user-img-mobile > img{
+    position: relative;
+    left: 3rem;
+}
+
+.bottombar-home-mobile{
+    position: fixed;
+    height: 5.5rem;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff !important;
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.home-icon-mobile {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 50px;
+}
+
+/*.plus-icon-mobile {
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    width: 50px;
+}*/
+
+.plus-icon-mobile-user {
+    position: absolute;
+    left: 70%;
+    top: 15%;
+    width: 50px;
+}
+
+.user-icon-mobile {
+    position: absolute;
+    left: 75%;
+    top: 15%;
+    width: 50px;
+}
+
+.homepage-row {
+    margin-top: 2rem;
+}
+
+.img-signout-container {
+    /*position: relative;
+    left: 2.5rem;*/
+}
+
+.user-fullname {
+    margin-left: 2.5rem;
+    
+}
+
+.layout-atlas-phone {
+    background: rgba($color: $valcon-light-grey, $alpha: 0.4);
+}
+
+.-home-mobile > ul.navbar-nav > li.mx-navbar-item > a > span.glyphicon {
+    color: $valcon-dark-grey;
+}
+
+.home-mobile-reservation-overview {
+    padding: 2rem 0 5rem;
+    margin-bottom: 5rem;
+
+    .mx-listview {
+        ul li {
+            background-color: white;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+            border-radius: 20px;
+            width: 90%;
+            position: relative;
+            top: 50px;
+            left: 19px;
+            margin-bottom: 25px;
+            padding: 0 10px 10px;
+        }
+    }
+}
+
+.mobile-grid{
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+    border-radius: 20px;
+    width: 90%;
+    position: relative;
+    top: 50px;
+    left: 19px;
+    margin-bottom: 25px;
+    padding: 0 10px 10px;
+}
+
+/*New reservation page*/
+
+.reservation-layout-grid {
+    margin-top: 50px;
+    padding: 0 20px 60px;
+}
+
+.time-increment > div.col-sm-9 > div.mx-radiogroup {
+        display: contents; 
+}
+
+.mx-name-container1 > div.mx-datepicker {
+        margin-top: 20px;
+}
+
+.officeImage-modal-dialog {
+    //height: auto !important;
+    //width: auto !important;
+    & > .modal-content {
+        & > .modal-header {
+            //display: none;
+        }
+        & > .modal-body {
+            height: auto !important;
+            width: auto !important;
+        }
+    }
+}
+
+.reservation-office-container {
+    & > a.mx-link {
+        text-decoration: none;
+        position: relative;
+        right: 2rem;
+        top: 0.1rem;
+        @media screen and (max-width: 768px) {
+            position: relative;
+            right: 2rem;
+            top: 2.5rem;
+        }
+    }
+
+    & .reservation-office-selector {
+        & .mx-compound-control {
+            max-width: 90%;
+            margin-left: 2.7rem;
+            @media screen and (max-width: 768px) {
+                margin-left: 0;
+            }
+            
+        }
+    }
+}
+
+
+
+/*Employee overview user*/
+
+.employee-overview-user {
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: white;
+    width: 250px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.589);
+    border-radius: 20px;
+}
+
+
+/*Admin action page*/
+
+.admin-action-table{
+    position: relative;
+    top: 60px;
+    left: 60px;
+}
+
+.admin-overview-container {
+    margin-top: 50px;
+}
+
+.time-input .time-input-item {
+    width: 20px;
+    margin-right: 15px;
+    flex-basis: auto;
+    flex: 0 1 auto;
+}
+
+li.mx-listview-empty > label {
+    position: relative;
+    top: 10px;
+}
+
+.mx-datagrid table tbody tr.selected td {
+    background-color: black !important;
+    color: #fff;
+} //when selecting item to edit
+
+.mx-datagrid table tbody tr.selected:hover td {
+    background-color: $valcon-dark-grey !important;
+    color: #fff;
+}
+
+/*************New navbar***********/
+
+div.navbar.navbar-default.mx-navbar.mx-name-menuBar1 {
+    background-color: black;
+    position: relative;
+    left: 35px;
+}
+
+.mobilesidenav {
+    background-color: black;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    right: 17px;
+    top: 1px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: none;
+}
+
+.mx-navbar ul.nav > li.mx-navbar-item > a:hover {
+    background-color: none;
+}
+
+h6.mx-text.mx-name-text4.heading-item {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+h6.mx-text.mx-name-text2.heading-item {
+    margin-top: 10px;
+}
+
+.signout-container {
+    margin-top: 10px;
+    .heading-item {
+        color: white;
+        margin-right: 20px;
+    }
+}
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+    color: white;
+    background-color: transparent;
+}
+
+a:focus {
+    outline: none;
+    outline: none;
+    outline-offset: -2px;
+}
+
+
+
+/**************Confirmation popups****************/
+
+.modal-footer.mx-dialog-footer {
+    button.btn {
+        color: black;
+        background-color: $valcon-light-grey;
+        &:hover {
+            color: black;
+            background-color: darken($color: $valcon-light-grey, $amount: 10%);
+        }
+    }  
+
+    button.btn.btn-primary {
+        color: white;
+        font-weight: bold;
+        background-color: $valcon-green;
+        border: none;
+        &:hover {
+            color: white;
+            background-color: darken($color: $valcon-green, $amount: 10%);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "excludes": {
+        "Atlas_Core": {
+             "layouts": true
+        },
+        "Atlas_Web_Content": {
+            // "buildingBlocks": true,
+            // "designProperties": true,
+            "layouts": true
+            
+            // "pageTemplates": true
+        },
+        "Valcon_Components": {
+            // "buildingBlocks": true,
+            // "designProperties": true,
+             "layouts": true
+            
+           //  "pageTemplates": true
+        }
+    }
+}

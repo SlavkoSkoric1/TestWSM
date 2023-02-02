@@ -1,0 +1,16 @@
+@import "custom-variables";
+
+@mixin button($color-txt, $color-bkg, $amount) {
+    color: $color-txt;
+    background-color: $color-bkg;
+    &:hover {
+        color: $color-txt;
+        background-color: darken($color: $color-bkg, $amount: $amount);
+    }
+    &:focus,
+    &:active {
+        color: $color-txt;
+        background-color: $color-bkg;
+        border-color: none;
+    }
+}

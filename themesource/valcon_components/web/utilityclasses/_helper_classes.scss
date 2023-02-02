@@ -1,0 +1,158 @@
+////////////////////////////////// 
+//////// Padding & Margin
+////////////////////////////////// 
+
+$selectors:     padding,
+                margin;
+                
+$directions:    ''          ''              $spacing-medium,
+                -none       ''              0,
+                -t-none     -top            0,
+                -r-none     -right          0,
+                -b-none     -bottom         0,
+                -l-none     -left           0,
+                -t          -top            $spacing-medium,
+                -r          -right          $spacing-medium,
+                -b          -bottom         $spacing-medium,
+                -l          -left           $spacing-medium,
+                -h          -left           $spacing-medium,
+                -h          -right          $spacing-medium,
+                -v          -top            $spacing-medium,
+                -v          -bottom         $spacing-medium,
+                -t-a        -top            auto,
+                -r-s        -right          $spacing-scrollbaroffset,
+                -t-t        -top            $spacing-text,
+                -r-t        -right          $spacing-text,
+                -l-t        -left           $spacing-text,
+                -b-t        -bottom         $spacing-text,
+                -text       ''              $spacing-text,
+                -h-t        -left           $spacing-text,
+                -h-t        -right          $spacing-text,
+                -v-t        -top            $spacing-text,
+                -v-t        -bottom         $spacing-text;
+
+@each $selector in $selectors{
+    @each $direction in $directions{
+        .#{nth($selector, 1)}#{nth($direction, 1)}{
+            #{nth($selector, 1)}#{nth($direction, 2)}: #{nth($direction, 3)} !important;
+        }
+    }
+}
+
+
+
+
+////////////////////////////////// 
+//////// Background colors
+////////////////////////////////// 
+
+$cl_white:                  #fff !default;
+$cl-bg-body:                #f9f9f9 !default;    //bg of the main background
+$cl-bg-elements:            #ffffff !default;    //cards, panels
+$cl-bg-elements-secondary:  #f9f9f9 !default;    //cards in panels
+$cl-bg-primary:               lighten($brand-primary, 20) !default;
+$cl-bg-success:               lighten($brand-success, 20) !default;
+$cl-bg-warning:               lighten($brand-warning, 20) !default;
+$cl-bg-danger:                lighten($brand-danger, 40) !default;
+$cl-bg-info:                  lighten($brand-info, 40) !default;
+$cl-bg-inverse:               lighten($brand-inverse, 40) !default;
+$cl-bg-default:               lighten($brand-default, 20) !default;
+$cl-bg-accent:                lighten($brand-primary, 20) !default;
+$cl-bg-clickable:             lighten($brand-primary, 20) !default;
+$cl-bg-active:                lighten($brand-primary, 20) !default;
+
+
+
+$bg-colors:       main                $bg-color,
+                  secondary           $bg-color-secondary,
+                white               $cl_white,
+                  body                $cl-bg-body,
+                  elements            $cl-bg-elements,
+                  elements-secondary  $cl-bg-elements-secondary,
+                  primary             $cl-bg-primary,
+                  success             $cl-bg-success,
+                  warning             $cl-bg-warning,
+                  danger              $cl-bg-danger,
+                  info                $cl-bg-info,
+                  inverse             $cl-bg-inverse,
+                  default             $cl-bg-default,
+                  accent              $cl-bg-accent,
+                  clickable           $cl-bg-clickable,
+                  active              $cl-bg-active;
+
+@each $color in $bg-colors{
+  .bg-#{nth($color, 1)}, .cl-bg-#{nth($color, 1)}{
+      background-color: #{nth($color, 2)} !important;
+  }
+}
+
+
+////////////////////////////////// 
+//////// text
+////////////////////////////////// 
+
+.text-sub{
+  color: rgba($font-color-default, 0.5);
+}
+
+
+
+
+
+////////////////////////////////// 
+//////// Borders
+////////////////////////////////// 
+
+.border{
+  border: 1px solid $border-color-default;
+}
+
+.border-top{
+  border-top: 1px solid $border-color-default;
+}
+
+.border-bottom{
+  border-bottom: 1px solid $border-color-default;
+}
+
+.border-left{
+  border-left: 1px solid $border-color-default;
+}
+
+.border-right{
+  border-right: 1px solid $border-color-default;
+}
+
+
+////////////////////////////////// 
+//////// troubleshooting classes
+////////////////////////////////// 
+
+.displaynone{
+  display: none !important;
+}
+
+.displaycontents, .displaycontents.mx-dataview{
+  display: contents;
+  .mx-dataview-content{
+      display: contents;
+  }
+}
+
+// custom size helpers
+
+.w-100{
+  width: 100%;
+}
+
+.h-100{
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+//text-size
+span.text-xl{
+  font-size: 20px;
+  line-height: 24px;
+}

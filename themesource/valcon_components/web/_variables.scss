@@ -1,0 +1,48 @@
+///Change these variables in the [COMPANY]_CORE module. If you don't use the Valcon CORE modules, you can change the variables below.
+
+//////////////////////////////////////////////////
+// Colors
+//////////////////////////////////////////////////
+/// 
+/// //Colors
+$cl-subnav-text:                $font-color-default !default;
+$brand-active:                  $brand-primary !default;
+$white:                         #fff;
+$brand-clickable:               lighten($brand-primary, 5) !default; //hyperlinks, chevrons
+
+/// Background colors
+$cl-bg-hover:                   rgba(0,0,0,0.03) !default;
+$cl-bg-striped:                 rgba(0, 0, 0, 0.05) !default;
+$cl-bg-table-hover:             rgba(0,0,0,0.03) !default;
+$cl-bg-subnav:                  $bg-color !default;
+$cl-bg-subnav-hover:            rgba($brand-active, .2) !default;
+
+
+
+
+
+//////////////////////////////////////////////////
+// Sizes
+//////////////////////////////////////////////////
+
+$sz-width-sidenav:              80% !default;
+$sz-avatar-topnav:              40px !default;  //Size of avatar in topnav
+$sz-avatar-default:             80px !default;
+$sz-logo-login:                 32px !default;
+
+//////////////////////////////////////////////////
+// Sizes
+//////////////////////////////////////////////////
+
+$spacing-text:            5px !default;
+$spacing-scrollbaroffset: 15px !default;
+
+
+//////////////////////////////////////////////////
+// SHORT HAND
+//////////////////////////////////////////////////
+$sh-border-default:             1px solid $border-color-default !default;
+$sh-border-boxshadow:           0 0 0 1px rgba(0,0,0,.2) !default;
+$sh-box-shadow:                 0 3px 10px -2px rgba(0,0,0,0.1), 0 2px 4px 0px rgba(0,0,0,0.1) !default;
+$sh-box-shadow-hover:           0 5px 15px -2px rgba(0,0,0,0.2), 0 2px 4px 0px rgba(0,0,0,0.1) !default;
+$sh-background-gradient:        linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%) !default;

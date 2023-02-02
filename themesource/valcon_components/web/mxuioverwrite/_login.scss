@@ -1,0 +1,63 @@
+// major fixes
+.loginpage{
+  flex-direction: row-reverse;
+  .loginpage-left{
+    .loginpage-image{
+      animation: none !important;
+    }
+  }
+}
+
+// width of content layout
+.loginpage{
+  .loginpage-left{
+    width: 70%;
+    flex: 2;
+  }
+  .loginpage-right{
+    width: 30%;
+    flex: 1;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    z-index: 20;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
+.loginpage-formwrapper{
+  .form-group{
+    flex-direction: column;
+    .control-label{
+      display: none
+    }
+  }
+  h2{
+    margin-bottom: 10px;
+  }
+  #loginButton{
+    width: 100%;
+    //background-color: $brand-primary;
+    margin-top: 10px;
+  }
+}
+
+
+
+.loginpage-logo{
+  left: 30px;
+
+  width: $sz-logo-login;
+  height: $sz-logo-login;
+
+  
+  //display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: url(../../../resources/logo.svg);
+
+  svg{
+    display: none;
+  }
+}

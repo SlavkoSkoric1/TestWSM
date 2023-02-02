@@ -1,0 +1,33 @@
+//bootstrap override{
+    .navbar{
+        margin-bottom: 0;
+      }
+      
+      .navbar-default{
+        background-color: $topbar-bg;
+        border: none;
+        border-radius: 0;
+      }
+      
+      .navbar-default .navbar-nav > li > a{
+        color: $navigation-color;
+      }
+      
+      .navbar-default .navbar-nav > li:hover > a{
+        color: $navigation-color-hover;
+      }
+      
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active:hover > a,
+      .navbar-default .navbar-nav > .active:focus > a{
+        background-color: inherit;
+        color: $navigation-color-active;
+      }
+
+           
+      .navbar-default .navbar-nav > .open > a,
+      .navbar-default .navbar-nav > .open:hover > a,
+      .navbar-default .navbar-nav > .open:focus > a{
+        background-color: inherit;
+        color: $navigation-color-active;
+      }

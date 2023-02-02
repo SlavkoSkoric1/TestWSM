@@ -1,0 +1,45 @@
+  //places buttons in auto popups in the right place.
+  .modal-dialog.mx-dialog .mx-dialog-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+  
+    //add this to layouts i think.
+    .mx-layoutgrid {
+        margin: 0;
+        padding: 0;
+      
+        > .row {
+          > div {
+            &:first-child {
+              padding-left: 0;
+            }
+      
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+    }
+
+    //fixes atlas trying to put padding on col
+.flexlayout_content{
+  > .row > div{
+      padding: 0;
+  }
+}
+
+.row{
+  margin: 0;
+}
+
+.flexlayout_popup .flexlayout_content > .row > div{
+  padding-top: 0 !important;
+}
+

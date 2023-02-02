@@ -1,0 +1,253 @@
+{
+    "DivContainer": [
+        {
+            "name": "Alignment (Main Direction)",
+            "description": "Adds a main alignment direction",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "row-left",
+                    "class": "row-left"
+                },
+                {
+                    "name": "row-center",
+                    "class": "row-center"
+                },
+                {
+                    "name": "row-right",
+                    "class": "row-right"
+                },
+                {
+                    "name": "col-left",
+                    "class": "col-left"
+                },
+                {
+                    "name": "col-center",
+                    "class": "col-center"
+                },
+                {
+                    "name": "col-right",
+                    "class": "col-right"
+                },
+                {
+                    "name": "row-split",
+                    "class": "row-split"
+                }
+            ]
+        },
+        {
+            "name": "Alignment (Secondary Direction)",
+            "description": "Align secondary item direction",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "row-top",
+                    "class": "row-top"
+                },
+                {
+                    "name": "row-mid",
+                    "class": "row-mid"
+                },
+                {
+                    "name": "row-baseline",
+                    "class": "row-baseline"
+                },
+                {
+                    "name": "col-split",
+                    "class": "col-split"
+                },
+                {
+                    "name": "col-top",
+                    "class": "col-top"
+                },
+                {
+                    "name": "col-mid",
+                    "class": "col-mid"
+                },
+                {
+                    "name": "col-bottom",
+                    "class": "col-bottom"
+                }
+            ]
+        },
+        {
+            "name": "Gutters",
+            "description": "space on either side",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "gutters-sm",
+                    "class": "gutters-sm"
+                },
+                {
+                    "name": "gutters-md",
+                    "class": "gutters-md"
+                },
+                {
+                    "name": "gutters-xl",
+                    "class": "gutters-xl"
+                }
+            ]
+        },
+        {
+            "name": "Alert",
+            "description": "alert styles",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "alert-danger alert",
+                    "class": "alert-danger alert"
+                },
+                {
+                    "name": "alert-warning alert",
+                    "class": "alert-warning alert"
+                },
+                {
+                    "name": "alert-success alert",
+                    "class": "alert-success alert"
+                },
+                {
+                    "name": "alert-info alert",
+                    "class": "alert-info alert"
+                }
+            ]
+        },
+        {
+            "name": "Tag/Status/Badge",
+            "description": "tag styles",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "tag-success tag",
+                    "class": "tag-success tag"
+                },
+                {
+                    "name": "tag-warning tag",
+                    "class": "tag-warning tag"
+                },
+                {
+                    "name": "tag-danger tag",
+                    "class": "tag-danger tag"
+                },
+                {
+                    "name": "tag-info tag",
+                    "class": "tag-info tag"
+                },
+                {
+                    "name": "tag-inverse tag",
+                    "class": "tag-inverse tag"
+                },
+                {
+                    "name": "tag-default tag",
+                    "class": "tag-default tag"
+                },
+                {
+                    "name": "status-success status",
+                    "class": "status-success status"
+                },
+                {
+                    "name": "status-warning status",
+                    "class": "status-warning status"
+                },
+                {
+                    "name": "status-danger status",
+                    "class": "status-danger status"
+                },
+                {
+                    "name": "status-info status",
+                    "class": "status-info status"
+                },
+                {
+                    "name": "status-inverse status",
+                    "class": "status-inverse status"
+                },
+                {
+                    "name": "status-default status",
+                    "class": "status-default status"
+                },
+                {
+                    "name": "badge-success badge",
+                    "class": "badge-success badge"
+                },
+                {
+                    "name": "badge-warning badge",
+                    "class": "badge-warning badge"
+                },
+                {
+                    "name": "badge-danger badge",
+                    "class": "badge-danger badge"
+                },
+                {
+                    "name": "badge-info badge",
+                    "class": "badge-info badge"
+                },
+                {
+                    "name": "badge-inverse badge",
+                    "class": "badge-inverse badge"
+                },
+                {
+                    "name": "badge-default badge",
+                    "class": "badge-default badge"
+                }
+            ]
+        }
+    ],
+    "ListView": [
+        {
+            "name": "Hide-error",
+            "description": "Hides empty error",
+            "type": "Toggle",
+            "class": "hide-error"
+        },
+        {
+            "name": "Grid",
+            "description": "grid styles",
+            "type": "Dropdown",
+            "options": [
+                {
+                    "name": "grid grid-a",
+                    "class": "grid grid-a"
+                },
+                {
+                    "name": "grid grid-1",
+                    "class": "grid grid-1"
+                },
+                {
+                    "name": "grid grid-2",
+                    "class": "grid grid-2"
+                },
+                {
+                    "name": "grid grid-3",
+                    "class": "grid grid-3"
+                },
+                {
+                    "name": "grid grid-4",
+                    "class": "grid grid-4"
+                },
+                {
+                    "name": "grid grid-5",
+                    "class": "grid grid-5"
+                },
+                {
+                    "name": "grid grid-6",
+                    "class": "grid grid-6"
+                },
+
+            ]
+        },
+        {
+            "name": "Grid-equalheight",
+            "description": "makes first child respect height of sibling elements",
+            "type": "Toggle",
+            "class": "grid-equalheight"
+        }
+    ],
+    "com.mendix.widget.web.gallery.Gallery": [
+        {
+            "name": "Gallery-equalheight",
+            "description": "sets display:contents on row & li to make children have equal height",
+            "type": "Toggle",
+            "class": "gallery-equalheight"
+        }
+    ]
+}

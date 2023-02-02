@@ -1,0 +1,45 @@
+
+.btn-disabled{
+  opacity: 0.5;
+  cursor: default;
+  //pointer-events: none;
+}
+
+//work around to make buttons full width height and clickable when clickable containers are unavailable
+.btn-hack{
+  position: relative;
+  button.btn.mx-button.btn-inverse{
+    //background-color: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+// radio btn card hack
+
+.radiobtn_card_hack{
+  //background-color: red;
+  .mx-radiogroup{
+    display: flex;
+    flex-direction: column;
+  }
+  .radio{
+    border: none;
+    background-color: $white;
+    box-shadow: 0 5px 15px -3px rgba(0,0,0,0.25);
+    padding: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    //display: flex;
+    //flex-direction: column;
+    margin: 0 0 15px;
+    label{
+      display: block;
+      width: 100%;
+    }
+  }
+}

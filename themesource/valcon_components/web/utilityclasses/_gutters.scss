@@ -1,0 +1,41 @@
+// //fallback variables when variables are not set in custom-variables.scss. Change in custom-variables when possible.
+
+.gutters {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $spacing-medium;
+  padding-left: $spacing-medium;
+  max-width: 960px;
+
+  &-sm {
+    max-width: $screen-sm;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $spacing-medium;
+    padding-left: $spacing-medium;
+  }
+
+  &-md {
+    max-width: $screen-md;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $spacing-medium;
+    padding-left: $spacing-medium;
+  }
+
+  &-lg {
+    max-width: $screen-lg;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $spacing-medium;
+    padding-left: $spacing-medium;
+  }
+
+  &-xl {
+    max-width: $screen-xl;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: $spacing-medium;
+    padding-left: $spacing-medium;
+  }
+}

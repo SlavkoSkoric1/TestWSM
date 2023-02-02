@@ -1,0 +1,18 @@
+// Import this scss file into your main.scss
+
+// Import the custom variables
+@import "../../../../theme/web/custom-variables";
+
+// Redefine the font path as it is different from the default path in the FA lib
+$fa-font-path: "../../fonts/fontawesome";
+
+@import "lib/fontawesome";
+@import "lib/regular";
+@import "lib/solid";
+@import "lib/brands";
+
+@import "fa_buttons";
+@import "fa_mixins";
+
+// Import the file which contains al the glyhpicon-FA replacements
+@import "glyphicon_replacements";

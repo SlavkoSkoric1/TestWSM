@@ -1,0 +1,87 @@
+.mobilesidenav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: $sz-width-sidenav;
+    background-color: $cl-bg-active;
+    overflow: hidden;
+    z-index: 90;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+    display: none; //troubleshooting
+
+   &.open{
+    display: flex;
+    flex-direction: column;
+   }
+
+   button.btn-inverse{
+       position: fixed;
+       right: 0;
+       top: 0;
+       height: 100%;
+       width: calc( 100% - #{$sz-width-sidenav});
+       opacity: 0;
+   }
+    @media(min-width: $screen-lg){
+        //display: none;
+    }
+    &:before{
+        content: 'test';
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: calc( 100% - #{$sz-width-sidenav});
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .navbar-default{
+        display: contents;
+        > ul{
+            display: flex;
+            flex-direction: column;
+            float: none;
+            margin: 0; //bootstrap fix
+            > li{
+                >a{
+                    color: $navsidebar-color;
+                    padding: $spacing-medium;
+                }
+            }
+        }
+    }
+}
+
+.topnav{
+    .btn-toggle-open{
+        //margin-left: 15px;
+        margin-right: $spacing-medium;
+    }
+}
+
+
+.topnav{
+
+    .brand-logo, .logo, .navbar, .topnav-right{
+        display: none;
+    }
+
+    .btn-toggle-open{
+        display: block;
+    }
+    @media(min-width: $screen-lg){
+        .btn-toggle-open{
+            display: none;
+        }
+
+        .brand-logo, .logo, .navbar{
+            display: block;
+        }
+
+        .topnav-right{
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,873 @@
+//input extension, adds a context icon to an input field
+.input-icn {
+    position: relative;
+    .context-icn {
+        position: absolute;
+        left: 12px;
+        top: 13px;
+        z-index: 10;
+    }
+    input {
+        padding-left: 34px;
+    }
+}
+
+
+// Context Items
+.context-icn{
+    display: flex;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    //background-color: $white;
+    background-color: inherit;
+    display: block;
+    //border: 1px solid rgba(0,0,0,0.5);
+    margin-right: 10px; //?????? should this be here?
+}
+
+
+
+////////////////////////////////////
+// Radio ( )
+////////////////////////////////////
+.context-radio{
+    .context-icn{
+        border: 1px solid rgba($brand-primary,0.5);
+        background-color: $white;
+        border-radius: 50%;
+    }
+}
+
+
+
+////////////////////////////////////
+// Checkbox [ ]
+////////////////////////////////////
+.context-checkbox{
+    .context-icn{
+        border: 1px solid rgba($brand-primary,0.5);
+        background-color: $white;
+        border-radius: 4px;
+    }
+}
+
+
+
+////////////////////////////////////
+// Chevrons >
+////////////////////////////////////
+
+.context-chevron, .context-chevronback, .context-chevrondown{
+    .context-icn{
+        border-radius: 0;
+        transform: rotate(45deg);
+        border: 2px solid $brand-primary;
+        border-left: none;
+        border-bottom: none;
+        background-color: inherit;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.context-chevronback{
+    .context-icn{
+        transform: rotate(225deg);
+    }
+}
+
+.context-chevrondown {
+    .context-icn {
+      transform: rotate(135deg);
+    }
+  }
+
+
+
+
+////////////////////////////////////
+// Add Icon +
+////////////////////////////////////
+.context-create{
+    .context-icn{
+        //background-color: $brand-info;
+       // border: 1px solid $brand-info;
+        border-radius: 4px;
+        position: relative;
+        &::before, &::after{
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background: $brand-info;
+            border-radius: 5px;
+            top: 9px;
+            left: 5px;
+        }
+        &::after {
+            width: 2px;
+            height: 10px;
+            top: 5px;
+            left: 9px
+         }
+    }
+}
+
+////////////////////////////////////
+// Search
+////////////////////////////////////
+.context-search{
+    .context-icn{
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 16px;
+        border: 2px solid;
+        border-radius: 100%;
+        margin-left: -4px;
+        margin-top: -4px;
+    
+        &::after {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            border-radius: 3px;
+            width: 2px;
+            height: 8px;
+            background: currentColor;
+            transform: rotate(-45deg);
+            top: 10px;
+            left: 12px;
+        }
+        
+    }
+}
+
+
+////////////////////////////////////
+// chat
+////////////////////////////////////
+.context-chat{
+    .context-icn{
+
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            transform: scale(var(--ggs,1));
+            width: 20px;
+            height: 16px;
+            border: 2px solid;
+            border-bottom: 0;
+            box-shadow:
+                -6px 8px 0 -6px,
+                6px 8px 0 -6px;
+        
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 8px
+        }
+        &::before {
+            border: 2px solid;
+            border-top-color: transparent;
+            border-bottom-left-radius: 20px;
+            right: 4px;
+            bottom: -6px;
+            height: 6px
+        }
+        &::after {
+            height: 2px;
+            background: currentColor;
+            box-shadow: 0 4px 0 0;
+            left: 4px;
+            top: 4px
+        }
+        
+    }
+}
+
+
+////////////////////////////////////
+// bell
+////////////////////////////////////
+.context-bell{
+    .context-icn{
+        &,
+        &::before {
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px
+        }
+        & {
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            transform: scale(var(--ggs,1));
+            border: 2px solid;
+            border-bottom: 0;
+            width: 14px;
+            height: 14px
+        }
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute
+        }
+        &::before {
+            background: currentColor;
+            width: 4px;
+            height: 4px;
+            top: -4px;
+            left: 3px
+        }
+        &::after {
+            border-radius: 3px;
+            width: 16px;
+            height: 10px;
+            border: 6px solid transparent;
+            border-top: 1px solid transparent;
+            box-shadow:
+                inset 0 0 0 4px,
+                0 -2px 0 0;
+            top: 14px;
+            left: -3px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px
+        }
+        
+    }
+}
+
+
+////////////////////////////////////
+// inbox
+////////////////////////////////////
+.context-inbox{
+    .context-icn{
+        & {
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            transform: scale(var(--ggs,1));
+            width: 18px;
+            height: 18px;
+            border: 2px solid;
+            box-shadow: inset 0 -2px 0 0;
+            border-radius: 3px
+        }
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            background: currentColor;
+            height: 7px;
+            width: 7px;
+            border-radius: 2px;
+            bottom: -2px
+        }
+        &::before {
+            left: -2px
+        }
+        &::after {
+            right: -2px
+        }
+        
+    }
+}
+
+////////////////////////////////////
+// File []
+////////////////////////////////////
+
+.context-file{
+    .context-icn {
+      & {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 14px;
+        height: 16px;
+        border: 2px solid transparent;
+        border-right: 0;
+        border-top: 0;
+        box-shadow: 0 0 0 2px;
+        border-radius: 1px;
+        border-top-right-radius: 4px;
+        overflow: hidden
+      }
+      &::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        right: -1px;
+        top: -1px
+      }
+    }
+  }
+  
+
+////////////////////////////////////
+// Check \/
+////////////////////////////////////
+  .context-check{
+    .context-icn {
+      color: $brand-success;
+      & {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 100px
+      }
+      &::after {
+          content: "";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          left: 3px;
+          top: -1px;
+          width: 6px;
+          height: 10px;
+          border-width: 0 2px 2px 0;
+          border-style: solid;
+          transform-origin: bottom left;
+          transform: rotate(45deg)
+      }
+    }
+  }
+  
+
+////////////////////////////////////
+// cross X
+////////////////////////////////////
+  .context-cross{
+    .context-icn {
+      color: $brand-danger;
+      & {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 40px
+      }
+      &::after,
+      &::before {
+          content: "";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          width: 16px;
+          height: 2px;
+          background: currentColor;
+          transform: rotate(45deg);
+          border-radius: 5px;
+          top: 8px;
+          left: 1px
+      }
+      &::after {
+          transform: rotate(-45deg)
+      }
+    }
+  }
+
+
+////////////////////////////////////
+//  Info (i)
+////////////////////////////////////
+// .context-info{
+//     //position: relative;
+//     .context-icn {
+//         box-sizing: border-box;
+//         position: relative;
+//         display: block;
+//         transform: scale(var(--ggs,1));
+//         width: 20px;
+//         height: 20px;
+//         border: 2px solid;
+//         border-radius: 40px;
+//         &::after,
+//         &::before {
+//             content: "";
+//             display: block;
+//             box-sizing: border-box;
+//             position: absolute;
+//             border-radius: 3px;
+//             width: 2px;
+//             background: currentColor;
+//             left: 7px;
+//         }
+//         &::after {
+//             bottom: 2px;
+//             height: 8px;
+//         }
+//         &::before {
+//             height: 2px;
+//             top: 2px;
+//         }
+//   }
+
+
+
+
+////////////////////////////////////
+// Alerts
+////////////////////////////////////
+.alert-success{
+    .context-icn{
+        // background-color: $brand-success;
+        // position: relative;
+        // border: 1px solid $brand-success;
+        // border-radius: 4px;
+
+        // // replace with svg icons at some point
+        // &:before, &:after {
+        //     position: absolute;
+        //     left: 0;
+        //     background-color: $white;
+        //     content: "";
+        //     transform: translateX(8px) translateY(-3.5px) rotate(-45deg);
+        //     transform-origin: left bottom;
+        // }
+        // &:before { //short
+        //     top: 60%;
+        //     height: 40%;
+        //     width: 3px;
+        // }
+        
+        // &::after { //long
+        //     bottom: 0;
+        //     height: 3px;
+        //     width: 14px; //lengh
+        // }
+
+        & {
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            width: 22px;
+            height: 22px;
+            border: 2px solid;
+            transform: scale(var(--ggs,1));
+            border-radius: 4px
+        }
+        &::after {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            left: 3px;
+            top: -1px;
+            width: 6px;
+            height: 10px;
+            border-width: 0 2px 2px 0;
+            border-style: solid;
+            transform-origin: bottom left;
+            transform: rotate(45deg)
+        }
+    }
+}
+
+.alert-warning{
+    // .context-icn {
+    //     box-sizing: border-box;
+    //     position: relative;
+    //     display: block;
+    //     transform: scale(var(--ggs,1));
+    //     width: 22px;
+    //     height: 22px;
+    //     border: 2px solid;
+    //     border-radius: 4px;
+        
+    //     &:after, &:before {
+    //         content: "";
+    //         display: block;
+    //         box-sizing: border-box;
+    //         position: absolute;
+    //         width: 12px;
+    //         height: 2px;
+    //         background: currentColor;
+    //         transform: rotate(45deg);
+    //         border-radius: 5px;
+    //         top: 8px;
+    //         left: 3px
+    //     }
+    //     &:after {
+    //         transform: rotate(-45deg)
+    //     }
+    // }
+
+    .context-icn{
+        &,
+        &::before {
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px
+        }
+        & {
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            transform: scale(var(--ggs,1));
+            border: 2px solid;
+            border-bottom: 0;
+            width: 14px;
+            height: 14px
+        }
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute
+        }
+        &::before {
+            background: currentColor;
+            width: 4px;
+            height: 4px;
+            top: -4px;
+            left: 3px
+        }
+        &::after {
+            border-radius: 3px;
+            width: 16px;
+            height: 10px;
+            border: 6px solid transparent;
+            border-top: 1px solid transparent;
+            box-shadow:
+                inset 0 0 0 4px,
+                0 -2px 0 0;
+            top: 14px;
+            left: -3px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px
+        }
+        
+    }
+}
+
+.alert-danger{
+    .context-icn {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 20px;
+        height: 20px;
+        border: 2px solid;
+        border-radius: 40px;
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            border-radius: 3px;
+            width: 2px;
+            background: currentColor;
+            left: 7px;
+        }
+        &::after {
+            top: 2px;
+            height: 8px;
+        }
+        &::before {
+            height: 2px;
+            bottom: 2px;
+        }
+    }
+}
+
+.alert-info, .context-info{
+    .context-icn {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 20px;
+        height: 20px;
+        border: 2px solid;
+        border-radius: 40px;
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            border-radius: 3px;
+            width: 2px;
+            background: currentColor;
+            left: 7px;
+        }
+        &::after {
+            bottom: 2px;
+            height: 8px;
+        }
+        &::before {
+            height: 2px;
+            top: 2px;
+        }
+    }
+}
+////////////////////////////////////
+// Selected
+////////////////////////////////////
+
+.selected{
+    &.card, .card{
+        box-shadow: none;   
+        box-shadow:  0px 0px 0 2px  $brand-active;
+
+        &.context-checkbox, &.context-radio, .context-checkbox, .context-radio{
+            box-shadow:  0px 0px 0 2px  $brand-active;
+        }
+    }
+    &.context-checkbox, &.context-radio, .context-checkbox, .context-radio{
+        //box-shadow:  0px 0px 0 2px  $brand-active;
+        .context-icn{
+            background-color: $brand-active;
+            border-color: $brand-active;
+            position: relative;
+            
+
+            // replace with svg icons at some point
+            &:before, &:after {
+                position: absolute;
+                left: 0;
+                background-color: $white;
+                content: "";
+                transform: translateX(8px) translateY(-3.5px) rotate(-45deg);
+                transform-origin: left bottom;
+            }
+            &:before { //short
+                top: 60%;
+                height: 40%;
+                width: 3px;
+            }
+            
+            &::after { //long
+                bottom: 0;
+                height: 3px;
+                width: 14px; //lengh
+            }
+        }
+    }
+
+    &.context-chevron, .context-chevron, &.context-chevronback, .context-chevronback{
+        background-color: $brand-active;
+        box-shadow:  0px 0px 0 2px  $brand-active;
+        
+        *{
+            color: $white;
+        }
+
+        .context-icn{
+            border: 2px solid $white;
+            border-left: none;
+            border-bottom: none;
+        }
+
+    }
+}
+
+
+
+////////////////////////////////////
+// Groupbox
+////////////////////////////////////
+// .glyphicon-plus,
+// .glyphicon-plus::before {
+// }
+// .glyphicon-plus {
+//   margin-top: -2px;
+//   position: relative;
+//   width: 16px;
+//   height: 2px;
+//   top: -9px;
+//   transform: scale(0.7);
+// }
+// .glyphicon-plus::before {
+//     content: "";
+//     display: block;
+//     box-sizing: border-box;
+//     position: absolute;
+//     width: 10px;
+//     height: 10px;
+//     border-bottom: 2px solid;
+//     border-right: 2px solid;
+//     transform: rotate(-45deg);
+//     right: 6px;
+//     top: 4px
+// }
+
+
+// .glyphicon-minus,
+// .glyphicon-minus::before {
+// }
+// .glyphicon-minus {
+//     margin-top: -2px;
+//     position: relative;
+//     width: 16px;
+//     height: 2px;
+//     top: -11px;
+//     transform: scale(0.7);
+// }
+// .glyphicon-minus::before {
+// content: "";
+// display: block;
+// box-sizing: border-box;
+// position: absolute;
+// width: 10px;
+// height: 10px;
+// border-bottom: 2px solid;
+// border-right: 2px solid;
+// transform: rotate(45deg);
+// left: 4px;
+// top: 2px
+// }
+
+
+
+
+
+
+///////////////////////////////////////////// checkbox div disabled
+
+
+
+// .checkboxdiv{
+//     .mx-text{
+//         display: none;
+//     }
+//     width: 22px;
+//     height: 22px;
+//     background-color: $white;
+//     display: block;
+//     border-radius: 50%;
+//     border: 1px solid $border-color-default;
+//     margin-right: 10px;
+// }
+
+// // .checkboxdiv{
+// //     &.open{
+
+// //     }
+// //     &.running{
+// //         background-color: rgba(0,0,0,0.05);
+// //     }
+// //     &.disabled{
+// //         //background-color: $brand-warning;
+// //     }
+// //     &.failed{
+// //         background-color: $brand-danger;
+// //     }
+// //     &.completed{
+// //         background-color: $brand-info;
+// //         border: 1px solid $brand-info;
+// //         position: relative;
+// //         &:before, &:after {
+// //             position: absolute;
+// //             left: 0;
+// //             background-color: $white;
+// //             content: "";
+// //             transform: translateX(8px) translateY(-3.5px) rotate(-45deg);
+// //             transform-origin: left bottom;
+// //         }
+// //         &:before { //short
+// //             top: 60%;
+// //             height: 40%;
+// //             width: 3px;
+// //         }
+        
+// //         &::after { //long
+// //             bottom: 0;
+// //             height: 3px;
+// //             width: 14px; //lengh
+// //         }
+// //     }
+
+// // }
+
+// .open{
+//     &.checkboxdiv, .checkboxdiv{
+
+//     }
+// }
+
+// .running{
+//     &.checkboxdiv, .checkboxdiv{
+//         //background-color: rgba(0,0,0,0.05);
+//     }
+// }
+
+// .disabled{
+//     &.checkboxdiv, .checkboxdiv{
+//     }
+// }
+
+// .failed{
+//     .checkboxdiv{
+//         background-color: $brand-danger;
+//     }
+// }
+
+// .completed{
+//     &.checkboxdiv, .checkboxdiv{
+//         background-color: $brand-info;
+//         border: 1px solid $brand-info;
+//         position: relative;
+//         &:before, &:after {
+//             position: absolute;
+//             left: 0;
+//             background-color: $white;
+//             content: "";
+//             transform: translateX(8px) translateY(-3.5px) rotate(-45deg);
+//             transform-origin: left bottom;
+//         }
+//         &:before { //short
+//             top: 60%;
+//             height: 40%;
+//             width: 3px;
+//         }
+        
+//         &::after { //long
+//             bottom: 0;
+//             height: 3px;
+//             width: 14px; //lengh
+//         }
+//     }
+// }
+
+
+
+
+// .groupbox-checkbox-hack{
+//     position: absolute;
+//     //background-color: red;
+//     margin-top: 11px;
+// }
+
+
+

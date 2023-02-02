@@ -1,0 +1,29 @@
+.topnav {
+  .brand-logo {
+    display: none;
+  }
+
+  .brand-title {
+    display: none;
+  }
+
+
+  .brand-logo-horizontal {
+    // display: none;
+    margin-right: 0px;
+  }
+
+  .btn {
+    color: $font-color-default;
+    background-color: transparent;
+  }
+
+  ////In case you want to maximize the width of the topnav
+  //max-width: $sz-breakpoint-desktop-xl;
+  // margin-left: auto;
+  // margin-right: auto;
+
+}
+
+
+

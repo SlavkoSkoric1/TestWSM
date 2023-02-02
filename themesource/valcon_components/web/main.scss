@@ -1,0 +1,54 @@
+@import "../../../theme/web/custom-variables";
+@import "variables";
+
+
+//Import layouts - creates helper variables that are used in other files
+@import "utilityclasses/helper_classes";
+
+//Import layouts
+@import "layouts/flexlayout_popup";
+@import "layouts/flexlayout";
+@import "layouts/logo";
+@import "layouts/mobilenav";
+@import "layouts/subnav";
+@import "layouts/topnav";
+
+//Import mxui
+@import "mxuioverwrite/card";
+@import "mxuioverwrite/datagrids";
+@import "mxuioverwrite/dataview";
+@import "mxuioverwrite/input";
+@import "mxuioverwrite/layouts";
+@import "mxuioverwrite/listview";
+@import "mxuioverwrite/login";
+@import "mxuioverwrite/navtree";
+@import "mxuioverwrite/table";
+@import "mxuioverwrite/tabs";
+@import "mxuioverwrite/topnav";
+@import "mxuioverwrite/widget_accordion";
+@import "mxuioverwrite/widget_autocomplete";
+
+//Import utility class framework
+@import "utilityclasses/avatar";
+@import "utilityclasses/banner";
+@import "utilityclasses/button_pill";
+@import "utilityclasses/buttons";
+@import "utilityclasses/context_icns";
+@import "utilityclasses/cssgg_all";
+@import "utilityclasses/dropdown";
+@import "utilityclasses/grid";
+@import "utilityclasses/gutters";
+//@import "utilityclasses/helper_classes"; is imported on top
+@import "utilityclasses/helper_rowcol";
+@import "utilityclasses/helper_widthheight";
+@import "utilityclasses/icons";
+@import "utilityclasses/inputs";
+@import "utilityclasses/listview_fluidcontainer";
+@import "utilityclasses/listview";
+@import "utilityclasses/overflow";
+@import "utilityclasses/panel";
+@import "utilityclasses/table";
+@import "utilityclasses/tag";
+
+// Import Font Awesome
+@import "fontAwesome/fa_implementation";

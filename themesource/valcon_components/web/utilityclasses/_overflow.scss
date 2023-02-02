@@ -1,0 +1,18 @@
+// Last update: 19-08-2022 KDR
+
+// Scroll behaviour: scroll forces a scrollbar, auto sets a scrollbar only if required
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}

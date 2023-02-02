@@ -1,0 +1,39 @@
+  //////// tabs
+  .mx-tabcontainer,
+  .tab-justified.mx-tabcontainer {
+    > ul.mx-tabcontainer-tabs {
+      justify-content: flex-start;
+  
+      > li {
+        // flex-shrink: 0;
+        // flex-grow: 1;
+        flex: inherit;
+  
+        &:hover {
+          > a {
+            background-color: inherit;
+            color: $font-color-default;
+          }
+        }
+  
+        > a {
+          border: none !important;
+          //font-weight: 600;
+          // color: $cl-brand-active;
+          border-bottom: 4px solid transparent !important;
+  
+          &:focus {
+            outline: inherit;
+          }
+        }
+  
+        &.active {
+          > a {
+            //font-weight: 600;
+            color: $font-color-default;
+            border-bottom: 4px solid $brand-active !important;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,136 @@
+
+.tag {
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px 16px;
+    align-self: flex-start;
+    line-height: 16px;
+    margin: 4px 0;
+
+    &.tag-success {
+        color: $white;
+        background-color: $brand-success;
+    }
+
+    &.tag-warning {
+        color: $white;
+        background-color: $brand-warning;
+    }
+
+    &.tag-danger {
+        color: $white;
+        background-color: $brand-danger;
+    }
+    &.tag-info {
+        color: $white;
+        background-color: $brand-info;
+    }
+
+    &.tag-inverse {
+        color: $white;
+        background-color: $brand-inverse;
+    }
+
+    &.tag-active {
+        color: $white;
+        background-color: $brand-active;
+    }
+
+    &.tag-default {
+        color: $font-color-default;
+        background-color: $white;
+        box-shadow: $sh-border-boxshadow;
+    }
+}
+
+
+//status
+.status {
+    font-size: 12px;
+    padding-left: 10px;
+
+    &:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: $gray;
+        position: absolute;
+        margin-left: -10px;
+        margin-top: 4px;
+        border-radius: 1px;
+    }
+
+    &-success {
+        &:before {
+            background-color: $brand-success;
+        }
+    }
+
+    &-warning {
+        &:before {
+            background-color: $brand-warning;
+        }
+    }
+
+    &-danger {
+        &:before {
+            background-color: $brand-danger;
+        }
+    }
+
+    &-info {
+        &:before {
+            background-color: $brand-info;
+        }
+    }
+
+    &-inverse {
+        &:before {
+            background-color: $brand-inverse;
+        }
+    }
+
+    &-default {
+        &:before {
+            background-color: $brand-default;
+        }
+    }
+}
+
+
+
+
+
+.badge {
+    font-size: 12px;
+    padding: 2px 5px;
+    &-success {
+        color: $white;
+        background-color: $brand-success;
+    }
+
+    &-warning {
+        color: $white;
+        background-color: $brand-warning;
+    }
+
+    &-danger {
+        color: $white;
+        background-color: $brand-danger;
+    }
+    &-info {
+        color: $white;
+        background-color: $brand-info;
+    }
+
+    &-inverse {
+        color: $white;
+        background-color: $brand-inverse;
+    }
+
+    &-default {
+        color: $font-color-default;
+        background-color: $white;
+        box-shadow: $sh-border-boxshadow;
+    }
+}

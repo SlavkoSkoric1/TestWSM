@@ -1,0 +1,122 @@
+////////////////////////////////
+// pillbtns
+////////////////////////////////
+.btn-pillwrap.mx-radiobuttons {
+
+    *:after,
+    *:before {
+        display: contents;
+    }
+
+    .mx-radiogroup {
+        display: flex;
+        border-radius: 8px;
+        width: 100%;
+
+        //background-color: blue;
+        .radio {
+
+            flex-grow: 1;
+            //background-color: green;
+            text-align: center;
+            //background-color: red;
+            margin: 0;
+
+            //width: 50%;
+            label {
+                padding: 8px;
+                background-color: #eee;
+                flex-grow: 1;
+                margin-left: 0;
+            }
+
+            &:first-child label {
+                border-radius: 8px 0 0 8px;
+            }
+
+            &:last-child label {
+                border-radius: 0px 8px 8px 0px;
+            }
+
+            input[type="radio"] {
+                display: none;
+
+                &:checked {
+                    display: none;
+
+                    +label {
+                        background-color: $brand-active;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-pillwrap:not(.mx-radiobuttons):not(.mx-listview) {
+    //background-color: red;
+    display: flex;
+    //background-color: #eee;
+    border-radius: 8px;
+
+    >* {
+        padding: 8px;
+        flex-grow: 1;
+        background-color: #eee;
+        text-align: center;
+
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:last-child {
+            border-radius: 0px 8px 8px 0px;
+        }
+    }
+
+    .selected {
+        background-color: $brand-active;
+        color: $white;
+    }
+}
+
+.btn-pillwrap.mx-listview{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    > ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        //flex-wrap: wrap;
+        width: 100%;
+        border-radius: 8px;
+        > li{
+            display: contents;
+            .btn-pill-item{
+                width: 100%;
+                background-color: #eee;
+                //background-color: red;
+                padding: 8px;
+            }
+            .btn-pill-item.selected{
+                background-color: $brand-active;
+                color: $white;
+            }
+        }
+        >li:first-of-type{
+            .btn-pill-item{
+                border-radius: 8px 0 0 8px;
+            }
+        }
+        >li:last-of-type{
+            .btn-pill-item{
+                border-radius: 0px 8px 8px 0px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,63 @@
+.listview-inline{
+    .mx-listview{
+        display: contents;
+        >ul{
+            display: contents;
+            >li{
+                display: contents;
+            }
+        }
+    }
+}
+
+
+.listview-striped > ul > li:nth-of-type(odd) {
+    background-color: $cl-bg-striped;
+  }
+
+// hide elements
+
+.hide-error{
+    .mx-listview-empty{
+        display: none;
+    }
+}
+
+.hide-loadmore{
+    > .mx-listview-loadMore{
+        display: none;
+    }
+}
+
+.listview-header{
+        font-weight: bold;
+        border-bottom: $sh-border-default;
+}
+
+//give table in listview-header same padding as standard datagrid header
+table.mx-table.listview-header > tbody > tr > td{
+    padding: $spacing-medium;
+} 
+
+.listview-lined {
+    > ul > li {
+      border-bottom: $sh-border-default;
+    }
+  }
+
+  .listview-datagrid{
+    table.mx-table > tbody > tr > td{
+        border-bottom: 1px solid $grid-border-color;
+        padding: $spacing-medium;
+    }
+    .selected{
+        td{
+            background-color: $brand-primary !important;
+            color: $white;
+        }
+        &:hover td{
+            background-color: darken($brand-primary ,5) !important;
+                    color: $white;
+        }
+    }
+}

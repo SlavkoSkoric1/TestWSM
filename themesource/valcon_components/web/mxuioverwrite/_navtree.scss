@@ -1,0 +1,28 @@
+// remove mxui and core for this awesome default styling
+.mx-navigationtree{
+    ul {
+        list-style: none;
+        padding: 0;
+        li{
+            a{
+                display: block;
+                padding: $grid-padding-left/3 $grid-padding-left;
+                color: $navtopbar-color;
+                text-decoration: none;
+                &:hover{
+                    background-color: rgba(0,0,0,0.1);
+                }
+            }
+            ul{
+                padding-bottom: $grid-padding-bottom;
+                a{
+                    padding: $grid-padding-left/3 $grid-padding-left*2;
+                }
+            }
+        }
+    }
+
+    .mx-navigationtree-collapsed ul {
+        display: none;
+    }
+}

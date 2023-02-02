@@ -1,0 +1,81 @@
+.flexlayout_wrap{
+    display: flex;
+    background-color: $bg-color;
+    > div.mx-placeholder{
+      display: flex;
+      width: 100%;
+      > div.mx-placeholder{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex: 1;
+        overflow-y: hidden;
+        > div.mx-placeholder{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          flex: 1;
+          overflow-y: hidden;
+        }
+        div.mx-layoutgrid.flexlayout_content{
+          padding-top: 0px;
+          width: 100%;
+          display: flex;
+          min-height: 0; 
+          position: relative;
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 0;
+  
+          > .row{
+            overflow-y: auto;
+            width: 100%;
+            flex: 1;
+            // margin-right: -15px;
+            // margin-left: -15px;
+  
+            @media (min-width: $screen-md) {
+              flex: 1;
+              width: 100%;
+              > div{
+                overflow-y: auto;
+                max-height: 100%;
+                height: 100vh;
+  
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .flexlayout_content {
+    padding: 0;
+  }
+
+    // fixing popup layouts so scticky elements stick.
+    .flexlayout_content > .row > div {
+      height: 100%;
+    }
+    
+    .flexlayout_popup
+    > .modal-content
+    > .modal-body
+    > .flexlayout_content
+    > .row
+    > div
+    > .col-content {
+    overflow: initial; //might break the content footer and header??? seems to break if there is inline styling in MX
+  }
+  
+  .flexlayout_content > .row > div > .col-content {
+    overflow: initial; //might break the content footer and header??? seems to break if there is inline styling in MX
+  }
+
+  

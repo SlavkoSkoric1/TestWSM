@@ -1,0 +1,12 @@
+.mx-dataview-controls{
+  padding: 0;   
+  margin: 0;
+  border-top: none; 
+}
+
+
+.mx-dataview-message:not([style="display: none;"]) {
+  display: contents !important;
+}
+
+

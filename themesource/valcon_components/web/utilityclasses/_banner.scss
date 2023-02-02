@@ -1,0 +1,46 @@
+.banner{
+    z-index: 80;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background-color: $white;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+   
+
+    animation: fade-in, fade-stay, fade-out;
+    animation-duration: 3s;
+
+    .glyphicon {
+      color: $white;
+      margin-right: 15px;
+      cursor: default;
+    }
+  
+    &-success{
+      color: $white;
+      background-color: $brand-success;
+    }
+  }
+  
+  @keyframes fade-in {
+    0%   {opacity: 0;}
+    20% {opacity: 1;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes fade-stay {
+    0%   {opacity: 1;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes fade-out {
+    0%   {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+  }

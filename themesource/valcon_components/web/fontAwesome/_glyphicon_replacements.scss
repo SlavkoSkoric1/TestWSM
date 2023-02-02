@@ -1,0 +1,5 @@
+// Replace glyphicons by FA awesome with the configuration below
+.glyphicon {
+  @include fa-replace-glyphicon("fire", $fa-var-fire);
+  //@include fa-replace-glyphicon("pencil", $fa-var-pencil);
+}

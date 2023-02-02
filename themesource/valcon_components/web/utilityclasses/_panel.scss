@@ -1,0 +1,14 @@
+
+.panel{
+  border-radius: $border-radius-default;
+  //overflow: hidden; not desired since this will also hide your tooltips 
+  border: none;
+  //flex-shrink: 0;
+  background-color: $bg-color-secondary;
+  margin: 0;
+
+  .panel{
+    background-color: $bg-color; //To make a panel in an another panel a different color
+  }
+}
+

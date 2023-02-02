@@ -1,0 +1,87 @@
+table.mx-table{
+  table-layout: fixed;
+}
+
+
+table.table-hover.mx-table>tbody{
+  >tr:hover{
+      background-color: $cl-bg-hover;
+  }  
+}
+
+table.mx-table>tbody{
+  >tr>td, >tr>th{
+      padding: 2px 2px;
+      height: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+
+      .padding-r{
+          padding-right: $spacing-medium;
+      }
+      .padding-l{
+          padding-left: $spacing-medium;
+      }
+      .form-group{
+          margin: 0;
+          padding: 0 !important; //mxui.css fix
+
+          input{
+            //  text-align: right;
+          }
+      }
+  }
+  >tr.padding-t>td{
+      padding-top: $spacing-medium;
+  }
+  >tr.padding-b>td{
+      padding-bottom: $spacing-medium;
+  }
+}
+
+/// alignment classes table - main table //thx Kelvin de Ruiter
+
+// row-top translation for table, col and row level
+table.mx-table.row-top > tbody > tr > td,
+table.mx-table.row-top > tbody > tr > th,
+table.mx-table > tbody > tr.row-top > td,
+table.mx-table > tbody > tr.row-top > th,
+table.mx-table > tbody > tr > td.row-top,
+table.mx-table > tbody > tr > th.row-top {
+  vertical-align: top;
+}
+
+// row-mid translation for table, col and row level
+table.mx-table.row-mid > tbody > tr > td,
+table.mx-table.row-mid > tbody > tr > th,
+table.mx-table > tbody > tr.row-mid > td,
+table.mx-table > tbody > tr.row-mid > th,
+table.mx-table > tbody > tr > td.row-mid,
+table.mx-table > tbody > tr > th.row-mid {
+  vertical-align: middle;
+}
+
+// row-bottom translation for table, col and row level
+table.mx-table.row-bottom > tbody > tr > td,
+table.mx-table.row-bottom > tbody > tr > th,
+table.mx-table > tbody > tr.row-bottom > td,
+table.mx-table > tbody > tr.row-bottom > th,
+table.mx-table > tbody > tr > td.row-bottom,
+table.mx-table > tbody > tr > th.row-bottom {
+  vertical-align: bottom;
+}
+
+td.row-right, th.row-right{
+    display: table-cell !important;
+    text-align: right;
+}
+
+// table-striped
+.table-striped > tbody > tr:nth-of-type(odd){
+    background-color: inherit; //reset bootstrap
+}
+
+
+

@@ -1,0 +1,29 @@
+// subnav
+.subnav{
+    background-color: $cl-bg-subnav;
+    //min-height: 30px;
+    padding: 6px $spacing-medium;
+    display: flex;
+    align-items: center;
+    //border-bottom: 1px solid rgba(0,0,0,0.1);
+    > a{
+        margin-right: 5px;
+        padding: 6px 15px;
+        color: $cl-subnav-text;
+        border-radius: 100px;
+        &:hover{
+          text-decoration: none;
+          background-color: $cl-bg-subnav-hover;
+        }
+    }
+}
+
+
+$amountOfLinks: 20;
+@for $i from 1 through $amountOfLinks {
+  //Active
+  .subnav.active-#{$i} > *:nth-child(#{$i}){
+    color: $cl-subnav-text;
+    background-color: $cl-bg-subnav-hover;
+  }
+}

@@ -1,0 +1,197 @@
+@import 'cssgg_all';
+
+[class*="gg-"] {
+
+    
+
+}
+
+
+// MAPPING
+// first is the glyphicon, second is css.gg, third is to remove the :before of the glyphicon (false, if errors set to true)
+$icons:
+asterisk        asterisk        false,
+plus            math-plus           true,
+euro            euro                true,
+minus           math-minus          true,
+cloud           cloud           false,
+envelope        mail                true,
+pencil          pen             false,
+glass           glass           false,
+music           music           false,
+search          search              true,
+heart           heart           false,
+star            star            false, //doesnt exist
+star-empty      star-empty      false, //doesnt exist
+user            profile         false,
+film            film                true,
+th-large        view-day        false,
+th              view-grid       false,
+th-list         view-list       false,
+ok              check               true,
+remove          close           false,
+zoom-in         zoom-in         false,
+zoom-out        zoom-out        false,
+off             off             false,
+signal          signal          false,
+cog             cog             false,
+trash           trash           false,
+home            home            false,
+file            file                true,
+time            time                true,
+road            road            false,
+download-alt    download-alt    false,
+download        download        false,
+upload          upload          false,
+inbox           inbox           false,
+play-circle     play-circle     false,
+repeat          repeat          false,
+refresh         refresh         false,
+list-alt        list-alt        false,
+lock            lock                true,
+flag            flag            false,
+headphones      headphones      false,
+volume-off      volume-off      false,
+volume-up       volume-up       false,
+volume-down     volume-down     false,
+qrcode          qrcode          false,
+barcode         barcode         false,
+tag             tag             false,
+tags            tags            false,
+book            book            false,
+bookmark        bookmark        true,
+print           print           false,
+camera          camera          false,
+font            font            false,
+bold            bold            false,
+italic          italic          false,
+text-height     text-height     false,
+text-width      text-width      false,
+align-left      align-left      false,
+align-center    align-center    false,
+align-right     align-right     false,
+align-justify   align-justify   false,
+list            list            false,
+indent-left     indent-left     false,
+indent-right    indent-right    false,
+facetime-video  facetime-video  false,
+picture         picture         false,
+map-marker      map-marker      false,
+adjust          adjust          false,
+tint            tint            false,
+edit            pen            false,
+share           share           false,
+check           check           false,
+move            move            false,
+step-backward   step-backward       false,
+fast-backward   fast-backward   false,
+backward        backward        false,
+play            play            false,
+pause           pause           false,
+stop            stop            false,
+forward         forward         false,
+fast-forward    fast-forward    false,
+step-forward    step-forward    false,
+eject           eject           false,
+chevron-left    chevron-left    false,
+chevron-right   chevron-right   false,
+plus-sign       plus-sign       false,
+minus-sign      minus-sign      false,
+remove-sign     remove-sign     false,
+bell            bell            false,
+stats           trending        false;
+
+
+
+// .test{
+//     color green;
+// }
+
+// @each $icon in $icons {
+//     @if .test {
+//         color: red !important;
+//     }
+// }
+
+
+
+.icon-comparison{
+    display: flex;
+    padding: 30px;
+    .icon-comparison-col{
+        display: flex;
+        flex-direction: column;
+        > *{
+            height: 50px;
+            width: 50px;
+            border: 1px solid rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .icon-comparison-col.icons-unchanged{ }
+}
+
+
+
+
+
+
+//this loop works, but lots of icons have wonky spacing
+// @each $icon in $icons {
+//     .glyphicon-#{nth($icon, 1)} {
+//             // color: red !important;
+//             @extend .gg-#{nth($icon, 2)} !optional;
+//             @if #{nth($icon, 3)} == 'true'{
+//                 &:before{
+//                     content: none;
+//                 }
+//             }
+//         }
+// }
+
+
+
+
+//works
+// @each $icon in $icons {
+//         .glyphicon-#{nth($icon, 1)} {
+//             color: red !important;
+//             @extend .gg-#{nth($icon, 2)} !optional;
+//             @if #{nth($icon, 3)} == 'true'{
+//                 &:before{
+//                     content: none;
+//                 }
+//             }
+//         }
+// }
+
+
+
+
+
+//works
+// @each $icon in $icons {
+//         .glyphicon-#{nth($icon, 1)} {
+//             color: red !important;
+//             @extend .gg-#{nth($icon, 2)} !optional;
+//             @if #{nth($icon, 3)} == 'true'{
+//                 &:before{
+//                     content: none;
+//                 }
+//             }
+//         }
+// }
+
+
+
+
+
+//context icons
+
+.icn-chevron{
+    @extend .gg-chevron-right;
+    color: $brand-clickable;
+}
+
